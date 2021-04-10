@@ -1,7 +1,6 @@
 import math
-
 import pandas as pd
-from PIL import Image, ImageDraw, ImageColor
+from PIL import Image, ImageDraw
 
 
 def get_brand_names(dataframe: pd.DataFrame) -> list[str]:
@@ -43,7 +42,6 @@ def draw_shades(filename: str, height: int, colors: list[str]):
         coordinates[3] = coordinates[3] + 32
         coordinates[0] = 0
         coordinates[2] = 32
-
 
     jpg_name: str = filename + '.jpg'
     background.save(jpg_name, quality=95)
